@@ -2,17 +2,28 @@
 
 [ext_resource path="res://Card.gd" type="Script" id=1]
 
-[node name="Node2D" type="Node2D"]
-
-[node name="Card" type="Button" parent="."]
-margin_right = 12.0
-margin_bottom = 20.0
+[node name="Card" type="Button"]
+margin_left = 17.0
+margin_top = 5.0
+margin_right = 71.0
+margin_bottom = 62.0
 script = ExtResource( 1 )
 
-[node name="CardFront" type="TextureRect" parent="Card"]
-margin_right = 13.0
-margin_bottom = 21.0
+[node name="CardFront" type="ColorRect" parent="."]
+margin_top = 2.0
+margin_right = 40.0
+margin_bottom = 42.0
+color = Color( 0.858824, 0.0980392, 0.0980392, 1 )
 
-[node name="CardBack" type="TextureRect" parent="Card"]
-margin_right = 14.0
-margin_bottom = 21.0
+[node name="CardBack" type="ColorRect" parent="."]
+anchor_left = -0.159
+anchor_top = -0.083
+anchor_right = -0.159
+anchor_bottom = -0.083
+margin_left = 8.109
+margin_top = 5.984
+margin_right = 48.109
+margin_bottom = 45.984
+color = Color( 0.0901961, 0.34902, 0.713726, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

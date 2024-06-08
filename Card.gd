@@ -5,6 +5,7 @@ var is_matched = false
 
 onready var card_front = $CardFront
 onready var card_back = $CardBack
+onready var animation_player = $AnimationPlayer
 
 func _ready():
 	card_front.visible = false
@@ -16,9 +17,9 @@ func _on_card_pressed():
 		return
 
 	if is_flipped:
-		flip_down()
+		animation_player.play("flip_down")
 	else:
-		flip_up()
+		animation_player.play("flip_up")
 
 func flip_up():
 	is_flipped = true
@@ -30,5 +31,5 @@ func flip_down():
 	card_front.visible = false
 	card_back.visible = true
 
-func set_card_front_texture(texture):
-	card_front.texture = texture
+func set_card_front_color(color):
+	card_front.color = color
