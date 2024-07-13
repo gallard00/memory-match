@@ -8,6 +8,10 @@ var value
 
 
 func _ready():
+	set_h_size_flags(3)
+	set_v_size_flags(3)
+	set_expand(true)
+	set_stretch_mode(TextureButton.STRETCH_KEEP_ASPECT_CENTERED)
 	pass
 
 func _init(var s, var v):
